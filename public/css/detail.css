@@ -1,0 +1,45 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__article {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__img {
+    width: 80%;
+    max-height: 17rem;
+}
+
+.card__data {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 2rem;
+    padding: 2rem;
+    border: 1px solid var(--brown-6);
+    border-radius: 15px;
+}
+
+.publish__date {
+    align-self: flex-end;
+    padding: 0 0 1rem;
+}
+
+.card__title {
+    margin: 1rem 0;
+}
+
+.card__description {
+    padding: 1rem 0;
+}
+
+.catalog__link {
+    max-width: 12rem;
+    text-align: center;
+}

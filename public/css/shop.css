@@ -1,0 +1,101 @@
+.card__container {
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.shop__main {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.shopTitle h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.shopTitle h1 span {
+    font-size: 4rem;
+    background: var(--brown-12);
+    background: linear-gradient(
+        to right,
+        var(--brown-12) 0%,
+        var(--brown-11) 60%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.content__left {
+    max-width: 50%;
+}
+
+.content__right {
+    max-width: 45%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cart__img__link {
+    position: absolute;
+    top: -10px;
+    right: 60px;
+    width: 50px;
+    align-self: flex-end;
+}
+
+.shopImg {
+    width: 40%;
+    border-radius: 15px;
+}
+
+.card__article img {
+    aspect-ratio: 16/9;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+
+.card__price {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card__button {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--brown-5);
+    color: var(--brown-12);
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+/* ####### style cart page ###### */
+
+.container-main {
+    text-align: center;
+}
+
+.table {
+    width: 100%;
+    color: var(--brown-11);
+}
+
+.table img {
+    aspect-ratio: 19/9;
+    max-width: 200px;
+}
+
+.table td {
+    padding: 2rem;
+}
+
+.table input {
+    max-width: 4rem;
+    padding: 0.5rem 0;
+}

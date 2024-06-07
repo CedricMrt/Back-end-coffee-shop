@@ -1,0 +1,50 @@
+<%- include('./partials/header.ejs') %>
+<main class="main">
+    <div class="main__content">
+        <div class="main__background">
+            <h1>Notre catalogue</h1>
+        </div>
+    </div>
+</main>
+<section class="coffee__list" id="coffee__list">
+    <div class="category__select">
+        <select name="category" class="categorySelect" id="categorySelect">
+            <option selected value="">Tri selon la catégorie</option>
+            <% categories.forEach(category => { %>
+            <option value="<%= category.id %>"><%= category.category %></option>
+            <% }) %>
+        </select>
+    </div>
+
+    <div class="card__container">
+        <% coffees.forEach(coffee => { %>
+        <article class="card__article" data-id="<%= coffee.category_id %>">
+            <img
+                src="/images/coffees/<%= coffee.reference %>.png"
+                alt="image du café"
+                class="card__img"
+            />
+
+            <div class="card__data">
+                <span class="card__description"><%= coffee.description %></span>
+                <h2 class="card__title"><%= coffee.name %></h2>
+                <a href="/detail/<%= coffee.id %>" class="card__button"
+                    >Découvrir</a
+                >
+            </div>
+        </article>
+        <% }) %>
+    </div>
+    <div class="pagination" id="pagination"></div>
+    <div class="articles__button">
+        <button id="catalogButton">Voir tout</button>
+    </div>
+</section>
+<footer class="footer">
+    <p>© Ocoffee Hauts-de-Cloques 2024</p>
+</footer>
+</div>
+<script src="/js/catalog.js"></script>
+<script src="/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<%- include('./partials/header.ejs') %>
+<main class="contactMain">
+    <form action="/login" method="post" class="form" id="formLogin">
+        <div class="form__box login">
+            <h2>Identifiant</h2>
+            <div class="form__inputs">
+                <div class="form__email">
+                    <label for="email">Entrez votre email</label>
+                    <input type="email" name="email" autocomplete="off" required />
+                </div>
+                <div class="form__password">
+                    <label for="password">Entrez votre mot de passe</label>
+                    <input type="password" name="password" autocomplete="off" required />
+                </div>
+            </div>
+            <div class="remember__forgot">
+                <a href="#">Mot de passe oublié</a>
+            </div>
+            <button type="submit" class="form__button">connexion</button>
+            <div class="register-login">
+                <p>
+                    Pas encore membre ?<a href="/login" class="login__link" id="login__link">
+                        inscrivez-vous</a
+                    >
+                </p>
+            </div>
+        </div>
+    </form>
+
+    <form action="/login" method="post" class="form" style="display: none" id="formRegister">
+        <div class="form__box register">
+            <h2>Inscription</h2>
+            <div class="form__inputs">
+                <div class="form__name">
+                    <label for="lastname">Nom de famille</label>
+                    <input type="lastname" name="lastname" id="lastname" autocomplete="family-name" required />
+                </div>
+                <div class="form__name">
+                    <label for="firstname">Prénom</label>
+                    <input type="firstname" name="firstname" id="firstname" autocomplete="given-name" required />
+                </div>
+            </div>
+
+            <div class="form__inputs">
+                <div class="form__email">
+                    <label for="email">Entrez votre email</label>
+                    <input type="email" name="email" id="email" autocomplete="off" required />
+                </div>
+                <div class="form__password">
+                    <label for="password">Entrez votre mot de passe</label>
+                    <input type="password" name="password" id="password" autocomplete="off" required />
+                </div>
+            </div>
+            <button type="submit" class="form__button">S'enregistrer</button>
+            <div class="register-login">
+                <p>
+                    Déja membre ?<a href="/login" class="register__link" id="register__link">
+                        Connectez-vous</a
+                    >
+                </p>
+            </div>
+        </div>
+    </form>
+</main>
+<footer class="footer">
+    <p>© Ocoffee Hauts-de-Cloques 2024</p>
+</footer>
+</div>
+<script src="/js/users.js"></script>
+<script src="/js/common.js"></script>
+</body>
+</html>

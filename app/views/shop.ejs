@@ -1,0 +1,71 @@
+<%- include('./partials/header.ejs', {
+    cssFile: 'shop.css'
+}) %>
+<main class="main">
+    <div class="shop__main">
+        <div class="content__left">
+            <div class="shopTitle">
+                <h1 id="title">
+                    Bienvenue dans notre boutique<span>
+                        <br />
+                        Ocoffee</span
+                    >
+                </h1>
+            </div>
+            <p class="presentation" id="presentation">
+                 Un large choix de café vous attend, faite votre choix
+            </p>
+        </div>
+        <div class="content__right">
+            <img
+                class="shopImg"
+                id="coffeeImg"
+                src="/images/about.jpg"
+                alt="photo de tasses de café"
+            />
+            <div class="cart__img"><a href="#">
+                <img src="/images/cart.png" alt="image du panier" class="cart__img__link"></a>
+            </div>
+        </div>  
+    </div>
+</main>
+<section class="coffee__list" id="coffee__list">
+    <div class="category__select">
+        <select name="category" class="categorySelect" id="categorySelect">
+            <option selected value="">Tri selon la catégorie</option>
+            <% categories.forEach(category => { %>
+            <option value="<%= category.id %>"><%= category.category %></option>
+            <% }) %>
+        </select>
+    </div>
+
+    <div class="card__container">
+        <% coffees.forEach(coffee => { %>
+        <article class="card__article" data-id="<%= coffee.category_id %>">
+            <img
+                src="/images/coffees/<%= coffee.reference %>.png"
+                alt="image du café"
+                class="card__img"
+            />
+
+            <div class="card__data">
+                <span class="card__description"><%= coffee.description %></span>
+                <h2 class="card__title"><%= coffee.name %></h2>
+                <div class="card__price"><%= coffee.kg_price %> €</div>
+                <a href="#" class="card__button"
+                    >Ajouter au panier</a
+                >
+            </div>
+        </article>
+        <% }) %>
+    </div>
+    <div class="pagination" id="pagination"></div>
+</section>
+<footer class="footer">
+    <p>© Ocoffee Hauts-de-Cloques 2024</p>
+</footer>
+</div>
+<script src="/js/shop.js"></script>
+<script src="/js/common.js"></script>
+</body>
+</html>

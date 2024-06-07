@@ -1,0 +1,30 @@
+<%- include('./partials/header.ejs', {
+    cssFile: 'detail.css'
+}) %>
+<main class="main">
+    <article class="card__article">
+        <img
+            src="/images/coffees/<%= coffee.reference %>.png"
+            alt="image du café"
+            class="card__img"
+        />
+
+        <div class="card__data">
+            <div class="publish__date">
+                Ajouté le <%= coffee.date.toLocaleDateString() %>
+            </div>
+            <h2 class="card__title"><%= coffee.name %></h2>
+            <span class="card__description"><%= coffee.description %></span>
+            <a href="/catalog" class="catalog__link mainActive"
+                >Retour au catalogue</a
+            >
+        </div>
+    </article>
+</main>
+<footer class="footer">
+    <p>© Ocoffee Hauts-de-Cloques 2024</p>
+</footer>
+</div>
+<script src="/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<%- include('./partials/header.ejs') %>
+<main class="contactMain">
+    <div class="iframe">
+        <iframe
+            data-service="google-maps"
+            class="cmplz-placeholder-element cmplz-no-video cmplz-processed cmplz-activated"
+            data-src-cmplz="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2906.332246928203!2d2.9896858999999996!3d43.2444581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b1aee503c91557%3A0xf441b27e09ddcc08!2s2%20Imp.%20Boris%20Vian%2C%2011590%20Cuxac-d'Aude%2C%20France!5e0!3m2!1sfr!2sci!4v1653387021667!5m2!1sfr!2sci"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2906.332246928203!2d2.9896858999999996!3d43.2444581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b1aee503c91557%3A0xf441b27e09ddcc08!2s2%20Imp.%20Boris%20Vian%2C%2011590%20Cuxac-d'Aude%2C%20France!5e0!3m2!1sfr!2sci!4v1653387021667!5m2!1sfr!2sci"
+            width="100%"
+            height="250"
+            style="border: 0"
+            allowfullscreen=""
+            data-deferlazy="1"
+            referrerpolicy="no-referrer-when-downgrade"
+            loading="lazy"
+        ></iframe>
+    </div>
+    <h2>Nous contacter</h2>
+    <form action="" method="post" class="form">
+        <div class="form__inputs">
+            <div class="form__name">
+                <label for="name">Your Name</label>
+                <input
+                    type="text"
+                    name="name"
+                    id="name" autocomplete="given-name"
+                    required
+                    placeholder="Name..."
+                />
+            </div>
+            <div class="form__email">
+                <label for="email"> Email Adress</label>
+                <input
+                    type="email"
+                    name="email"
+                    id="email" autocomplete="off"
+                    required
+                    placeholder="Email..."
+                />
+            </div>
+        </div>
+        <div class="form__textArea">
+            <label for="textArea">Your Message</label>
+            <textarea
+                name="textarea"
+                id="textArea"
+                placeholder="Message..."
+            ></textarea>
+        </div>
+        <button type="submit">Envoyer</button>
+    </form>
+</main>
+<footer class="footer">
+    <p>© Ocoffee Hauts-de-Cloques 2024</p>
+</footer>
+</div>
+<script src="/js/common.js"></script>
+</body>
+</html>

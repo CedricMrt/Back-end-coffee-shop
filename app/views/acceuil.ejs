@@ -1,0 +1,63 @@
+<%- include('./partials/header.ejs') %>
+<main class="main">
+    <div class="main__content" id="main__content">
+        <div class="content__left">
+            <div class="title">
+                <h1 id="title">
+                    Bienvenue chez<span>
+                        <br />
+                        Ocoffee</span
+                    >
+                </h1>
+            </div>
+            <p class="presentation" id="presentation">
+                <span>Jean et Jacques Pepper. </span> Nous sommes deux frères
+                passionnés par l'univers du café. Allez-y parcourez notre
+                catalogue, prenez-en plein les yeux avant de régaler vos
+                papilles.
+            </p>
+            <a href="/catalog" class="catalog__link" id="catalog__link"
+                >Voir le catalogue</a
+            >
+        </div>
+        <div class="content__right">
+            <img
+                class="coffeeImg"
+                id="coffeeImg"
+                src="/images/about.jpg"
+                alt="photo de tasses de café"
+            />
+        </div>
+    </div>
+</main>
+<section class="coffee__list" id="coffee__list">
+    <h2>Nouveautés</h2>
+
+    <div class="card__container">
+        <% coffees.forEach(coffee => { %>
+        <article class="card__article">
+            <img
+                src="/images/coffees/<%= coffee.reference %>.png"
+                alt="image du café"
+                class="card__img"
+            />
+
+            <div class="card__data">
+                <span class="card__description"><%= coffee.description%></span>
+                <h2 class="card__title"><%= coffee.name %></h2>
+                <a href="/detail/<%= coffee.id %> " class="card__button"
+                    >Découvrir</a
+                >
+            </div>
+        </article>
+        <% }) %>
+    </div>
+</section>
+<footer class="footer">
+    <p>© Ocoffee Hauts-de-Cloques 2024</p>
+</footer>
+</div>
+<script src="/js/acceuil.js"></script>
+<script src="/js/common.js"></script>
+</body>
+</html>
